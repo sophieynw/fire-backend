@@ -11,7 +11,9 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 ## for deployment, uncomment the following lines to download the model from S3
 
 import urllib.request
-model_url = "https://fire-model.s3.us-east-1.amazonaws.com/fire_model.pkl"
+from dotenv import load_dotenv
+load_dotenv()
+model_url = os.environ.get("MODEL_URL")
 model_path = "/tmp/fire_model.pkl"
 if not os.path.exists(model_path):
     urllib.request.urlretrieve(model_url, model_path)
