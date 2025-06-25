@@ -25,7 +25,7 @@ python app.py
 
 To run this project, you may need to add the following environment variables to your .env file if you wish to pull my pkl file from my S3 bucket.
 
-`MODEL_URL` - please DM me if you wish to test my API locally
+`MODEL_URL` - please DM me if you wish to test my S3 bucket locally
 
 
 ## Appendix
